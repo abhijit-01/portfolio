@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/coding1.avif" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a30344171c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header" id="header">
+        <nav class="nav-bar">
+            <div class="logo">Portfolio</div>
+            <ul class="links">
+                <li><a href="#header" >Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="text">
+                <h2>Hi, I am <br><span>Abhijit Tripathy</span></h2>
+                <h2>A <span class="auto-type"></span></h2>
+            </div>
+            <div class="image">
+                <img src="images/coding1.avif" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <div class="hero">
+            <div class="holder">
+                <img src="images/pro2.png" alt="profile_photo">
+            </div>
+        </div>
+        <div class="abt-txt">
+            <h1>About Me</h1>
+            <p>
+                Greetings Everyone. My Name is Abhijit Tripathy and I am from India.
+                Currently I am in my 2nd year of BTech pursuing Electronics & Instrumentation in OUTR, Bhubaneswar.
+                I am also a Programmer who takes great interest in the coding world and is very fascinated by the 
+                Technological growth of the world.
+            </p>
+            <div class="tab-titles">
+                <p class="tab-links active-link"  onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+                <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>React JS</span> <br>A Javascript Framework for Making functional Websites</li>
+                    <li><span>Html,Css,Javascript</span> <br>Making Front-End of a Website</li>
+                    <li><span>UI/UX</span> <br>Designing web interfaces</li>
+                    
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>BTech  2026</span> <br>Electronics & Instrumentation Undergraduate at OUTR</li>
+                    <li><span>Class XII  2019</span> <br>St. Xavier's High School</li>
+                    <li><span>Class X  2019</span> <br>Venkaeswar English Medium School</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="hobbies">
+                <ul>
+                    <li><span>Video Editing</span> <br>Part-Time Video Editor who likes Editing</li>
+                    <li><span>Reading Books</span> <br>Enthusiast learner who likes to learn a lot through peoples's Experience in their Books</li>
+                    <li><span>Traveller</span> <br>A Travel frek who loves to travel and explore what destiny has in store for me.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="projects" id="projects">
+        <div class="container">
+            <div class="gap"></div>
+            <h1>My Projects</h1>
+            <div class="files">
+                <div class="img1">
+                    <img src="images/Todo.jpg" alt="">        
+                    <div class="layer">
+                        <h3>Todo App</h3>
+                        <p>This is Todo app made with React js which helps to track the daily todos in one place</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>            
+                </div>
+                
+                <div class="img2">
+                    <img src="images/istockphoto-1395632555-612x612.jpg" alt="">
+                    <div class="layer">
+                        <h3>Rock Paper Scissors Game</h3>
+                        <p>This is the rock paper scissors game made with Html,Css and Javascript</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="img3">
+                    <img src="images/Screenshot 2024-06-16 173957.png" alt="">
+                    <div class="layer">
+                        <h3>Tic Tac Toe Game</h3>
+                        <p>This is the Tic Tac Toe Game made using the core concepts of Javascript</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="contact-me" id="contact">
+        
+        <div class="container">
+            <div class="gap"></div>
+            <div class="row">
+                <div class="contact-left">
+                    <h1>Contact Me</h1>
+                    <p>contact @email-id</p>
+                    <p>01234556789</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+
+                    </div>
+                    <a href="" download class="btn">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email-id" required id="">
+                        <textarea name="Message" rows="6" placeholder="Your Message" id=""></textarea>
+                        <button type="submit" onclick="refpage()" class="btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        let typed = new Typed(".auto-type",{
+            strings: ["Front-End Developer" , "React Js Developer" , "Coder"],
+            typeSpeed:300,
+            backSpeed:150,
+            loop:true
+        })
+
+    </script>
+    <script>
+        let tablinks = document.getElementsByClassName("tab-links");
+        let tabcontents = document.getElementsByClassName("tab-contents");
+        const opentab = (tabname)=>{
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwJWzBxUgMslMWVtKm5rCJHMAuyQeJ7wVPQqXLXFJdZeqN0-P5vkx6IQgs_aRlDRjG3/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+        const refpage = ()=>{
+            window.location.reload();
+        }
+      </script>
+</body>
+</html>
